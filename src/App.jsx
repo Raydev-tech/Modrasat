@@ -6,6 +6,7 @@ import {
   Sparkles, Compass, ScrollText, Star, Clock3, ChevronDown, Quote, Landmark,
   HandHeart, Languages, BookCopy, Sunrise, Send, Play, Pause, Repeat2, Volume2, ChevronLeft, ChevronRight, Bookmark, ListMusic
 } from 'lucide-react'
+import HifzMemorization from './component/HifzMemorization'
 
 const navItems = [
   ['Home', '#home'], ['Qur’an', '#quran-reader'], ['Prophets', '#prophets'],
@@ -103,19 +104,7 @@ const faqs = [
 function Brand({ footer = false }) {
   return (
     <a href="#home" className={`brand ${footer ? 'brand-footer' : ''}`} aria-label="Rawdatul Huffadh home">
-      <span className="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 72 78" fill="none">
-          <path d="M36 4C29 18 10 18 10 39V57L36 43L62 57V39C62 18 43 18 36 4Z" stroke="currentColor" strokeWidth="3.4" strokeLinejoin="round"/>
-          <path d="M13 57L36 68L59 57" stroke="currentColor" strokeWidth="3.4" strokeLinecap="round"/>
-          <path d="M20 46L36 56L52 46L36 63L20 46Z" fill="currentColor"/>
-          <path d="M40 17C32 24 38 35 48 31C43 39 29 34 30 24C31 20 35 17 40 17Z" fill="#bd8b3b"/>
-          <path d="M36 33V45M32 39H40" stroke="#bd8b3b" strokeWidth="2" strokeLinecap="round"/>
-        </svg>
-      </span>
-      <span className="brand-copy">
-        <strong>RAWDATUL HUFFADH</strong>
-        <span><i /> ISLAMIC INSTITUTE <i /></span>
-      </span>
+      <img src="/institute-logo.jpeg" alt="" className='w-28'/>
     </a>
   )
 }
@@ -395,6 +384,7 @@ function App() {
         </section>
 
         <QuranReader />
+        <HifzMemorization />
 
         <section id="quran" className="quran-section container" data-aos="fade-up">
           <div className="quran-emblem"><BookOpen size={38}/><MoonStar size={18}/></div>

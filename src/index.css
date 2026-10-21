@@ -249,3 +249,124 @@ button{cursor:pointer}
 @media(max-width:680px){.reader-layout{grid-template-columns:1fr}.reader-sidebar{padding:12px}.surah-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));max-height:260px}.surah-option{gap:7px;padding:8px 5px}.surah-option-copy small{font-size:8px}.surah-arabic{font-size:15px}.reader-list-note{grid-column:1/-1}.reader-topline{flex-direction:column;gap:10px}.reader-controls{align-items:flex-start}.reader-controls>label:first-child{width:100%;justify-content:space-between}.reader-controls select{flex:1;max-width:none}.ayah-arabic{font-size:26px}.reader-player{gap:9px}.player-copy strong{font-size:10px}}
 .reader-loading{display:flex;align-items:center;justify-content:center;gap:10px;min-height:180px;color:#526c64;font-size:12px}
 .reader-loading .player-spinner{border-color:#064e3b35;border-top-color:#064e3b}
+
+
+/* Online Qur'an memorization — additional styles only */
+.hifz-card {
+  max-width: 850px;
+  margin: 35px auto 0;
+  padding: 30px;
+  border: 1px solid #e4e9df;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 12px 40px rgba(20, 50, 35, 0.06);
+}
+
+.hifz-label {
+  display: block;
+  margin: 22px 0 9px;
+  font-weight: 600;
+  color: #234b38;
+}
+
+.hifz-select {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #dce4db;
+  border-radius: 10px;
+  background: #fff;
+  color: #263d31;
+}
+
+.hifz-progress {
+  margin: 25px 0;
+}
+
+.hifz-progress > div:first-child,
+.hifz-ayah-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.hifz-progress-track {
+  height: 9px;
+  margin: 12px 0;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #e8eee7;
+}
+
+.hifz-progress-track > div {
+  height: 100%;
+  border-radius: inherit;
+  background: #327454;
+  transition: width 0.25s ease;
+}
+
+.hifz-ayah {
+  display: grid;
+  place-items: center;
+  min-height: 200px;
+  margin: 18px 0;
+  padding: 25px;
+  border-radius: 16px;
+  background: #f6f8f3;
+}
+
+.hifz-ayah .ayah-arabic {
+  width: 100%;
+  font-size: clamp(26px, 4vw, 39px);
+  line-height: 2;
+  text-align: center;
+}
+
+.hifz-hidden {
+  text-align: center;
+  line-height: 1.8;
+  color: #526658;
+}
+
+.hifz-actions,
+.hifz-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.hifz-audio {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.hifz-note {
+  margin-top: 20px;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #647268;
+}
+
+.hifz-card button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+@media (max-width: 600px) {
+  .hifz-card {
+    padding: 18px;
+  }
+
+  .hifz-actions > button,
+  .hifz-navigation > button {
+    flex: 1;
+  }
+
+  .hifz-ayah {
+    min-height: 170px;
+    padding: 16px;
+  }
+}
+
